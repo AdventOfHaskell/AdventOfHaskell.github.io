@@ -1,9 +1,417 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Advent of Haskell</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Advent of Haskell Blog post Challenge 2020">
+    <meta name="keywords" content="Haskell, Functional progarmming, FP">
+    <meta name="author" content="Kowainik"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AdventOfHaskell" />
+    <meta property="og:title" content="Advent of Haskell 2020" />
+    <meta property="og:description" content="Advent of Haskell Blog post Challenge 2020" />
+    <meta property="og:url" content="https://kowainik.github.io" />
+    <meta property="og:image" content="assets/images/AdventOfHaskell-Logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Advent of Haskell 2020" />
+    <meta name="twitter:description" content="Advent of Haskell Blog post Challenge 2020" />
+    <meta name="twitter:image:src" content="https://adventofhaskell.com/assets/images/AdventOfHaskell-Logo.png" />
+    <meta name="twitter:url" content="https://adventofhaskell.com" />
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
-<h1>Hello world!</h1>
+  <div class="loader-wrapper justify-content-center align-items-center">
+    <div class="beautiful-font loader-image"> <h2>Loading Christmas Gifts...</h2></div>
+    <div class="loader-image">
+     <img src="assets/images/santa.png" class="img-fluid" alt="loader">
+   </div>
+ </div>
+
+ <section class="top-banner" id="home" style="background-image: url('assets/images/top-header-banner.png');animation: ">
+  <div style="background-image: url('assets/images/tree-banner.png');" class="tree-banner">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-8 col-sm-12 mx-auto text-center top-banner__content justify-content-center">
+        <h2>Advent</h2>
+        <p class="beautiful-font">of</p>
+        <h1 class="beautiful-font">Haskell</h1>
+        <a href="#about" class="button text-uppercase mt-5">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <div id="particles-js"></div>
+</section>
+
+  <!---->
+  <section class="section about" id="about" style="background-image: url('assets/images/banner-2.png');">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center">
+          <h2 class="section__heading">About</h2>
+          <span class="sock"> <img src="assets/images/socks.png" class="img-fluid" alt="sock image"></span>
+          <div class="section-text">
+          <p> Haskell Santa brought Christmas Gifts to everyone! 🎁
+          </p>
+          <p>
+              It was a tough year, but you were good Haskellers 🎅 And Santa decided to treat everyone with a special gift — the "Advent of Haskell" calendar!
+          </p>
+          <p>
+              Each day from Dec 1 to Dec 24 a new "Santa"-Haskeller shares their blog post written specifically for Advent of Haskell. But that is not all! During that day they will lead the dedicated Twitter Account where they can discuss the blog post, create QA sessions, arrange meetings, or do whatever they want. The only rule is that it would be around Haskell 😉
+          </p>
+          <p>
+              Let's write some blog posts, celebrate awesome Haskell and share love with the community! Stay tuned for daily updates! 🥳🍾
+          </p>
+          <blockquote> "Advent of Haskell" is inspired by <a href="https://sergeytihon.com/2020/10/22/f-advent-calendar-in-english-2020/" target=_blank">F# Advent Calendar</a>
+              </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rules -->
+  <section class="section-product section" id="rules" style="background-image: url('assets/images/banner-1.png');">
+      <div style="background-image: url('assets/images/tree-banner.png');" class="tree-banner">
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center">
+                  <h2 class="section__heading">Rules</h2>
+                  <span class="sock"> <img src="assets/images/socks.png" class="img-fluid" alt="sock image"></span>
+                  <div class="section-text">
+                  <p>
+                      If you just want to subscribe for superb Haskell content then follow the <a href="https://twitter.com/AdventOfHaskell" target=_blank>@AdventOfHaskell</a> Twitter account. And encourage others to write blog posts and share them on their own Twitter-day!
+                  </p>
+                  <p> If you want to become an author for a day, here is how it works: </p>
+                  <ul class="text-left">
+
+                      <li>Before November 30, <a href="#contact-us-section">contact us</a> to book a day-slot between December 1 and December 24 (including) when you want to become a Secret-Santa of that day. You will need to share your blog post on that day. However, <strong><u>please note that you do not have to announce the topic until the date.</u></strong>
+                      </li>
+                      <li> On the booked day, take the <a href="https://twitter.com/AdventOfHaskell" target=_blank>@AdventOfHaskell</a> Twitter account. We will send you the password approximately around 12:00AM UTC on your day. Make sure you can receive direct messages on Twitter (or make sure that we agreed on the place you can be contacted at) 📬
+                      </li>
+                      <li> Start your day with introducing yourself and then share your blog post in the "AdventOfCode" Twitter account. We encourage to add <strong>#Haskell</strong> and <strong>#AdventOfHaskell</strong> hashtags to your announcement.
+                      </li>
+                      <li> During the day, you can discuss the blog post with people, answer their questions, or share general thoughts about Haskell. Please, be polite and respectful to others.
+                      </li>
+                      <li> Write a farewell message no later than 23:00 UTC, and return the account back to us, so we can give it to the next author!
+                      </li>
+        </ul>
+        <p>
+You can host your blog post anywhere you want and write about anything you want. Everything works while your blog follows the following rules:
+        </p>
+        <ul class="text-left">
+                      <li> It must be about Haskell (language, ecosystem, some library or technique, community, Functional Programming in general, etc.)
+                      </li>
+                      <li> It must be a new blog post written by you.
+                      </li>
+                      <li> The blog post must be written in English.
+                      </li>
+                      <li> The content of the blog post should follow <a href="https://github.com/AdventOfHaskell/AdventOfHaskell.github.io/blob/main/CODE_OF_CONDUCT.md" target="_blank">Code of Conduct</a>.
+                      </li>
+        </ul>
+
+        <p>
+We encourage everyone to become authors, even if you're not a Haskell celebrity.
+If you always wanted to start writing but couldn't start then it is your chance! Don't be afraid about the content! We (Veronika and Dmitrii) can help with reviewing your blog post before publishing if you wish, so don't worry! We would love to see new faces blogging about Haskell and sharing their amazing work with everyone! 🤗
+
+                  </p>
+              </div>
+          </div>
+          </div>
+      </div>
+  </section>
+
+ <!--  -->
+  <section class="section-product section" id="motivation" style="background-image: url('assets/images/banner-2.png');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center">
+        <h2 class="section__heading">Motivation</h2>
+        <span class="sock"> <img src="assets/images/socks.png" class="img-fluid" alt="sock image"></span>
+        <div class="section-text">
+        <p>You may ask, what's in this for you? Fair question! By participating in Advent of Haskell as an author, you gain the following perks:
+        </p>
+        <ul class="text-left">
+
+            <li>
+            Helping the Haskell community by contributing valuable documentation
+            </li>
+            <li>
+            Boost your personal brand by reaching a larger audience
+            </li>
+            <li>
+            Learning something new from valuable discussions with other community members
+            </li>
+            <li>
+            Chatting with the Haskell community
+            </li>
+            <li>
+        and generally having fun before holidays!
+            </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Calendar  =-->
+ <section class="section-product section" id="calendar" style="background-image: url('assets/images/banner-1.png');">
+   <div style="background-image: url('assets/images/tree-banner.png');" class="tree-banner">
+   </div>
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center">
+        <h2 class="section__heading">Calendar</h2>
+        <span class="sock"> <img src="assets/images/socks.png" class="img-fluid" alt="sock image"></span>
+      </div>
+    </div>
+    <div class="row calendar" >
+        <div class="col-4 calendar-date justify-content-center align-middle">
+             1 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            2 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            3 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            4 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            5 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            6 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            7 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            8 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            9 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            10 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            11 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            12 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            13 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            14 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            15 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            16 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            17 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            18 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            19 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            20 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            21 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            22 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            23 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+        <div class="col-4 calendar-date justify-content-center align-middle">
+            24 December
+        </div>
+        <div class="col-8 calendar-present">
+            <span class="sock"> <img src="assets/images/secret-santa.png" class="img-fluid" alt="unknown"></span>
+        </div>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+<!-- Contact us -->
+<section class="section contact-us" id="contact-us-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-4 col-sm-12 mx-auto text-center">
+        <h2 class="section__heading">Contact Us</h2>
+        <span class="sock"> <img src="assets/images/socks.png" class="img-fluid" alt="sock image"></span>
+        <div class="">
+        <p>You can reach us by messaging on Twitter:
+            <a href="https://twitter.com/AdventOfHaskell" target=_blank>@adventofhaskell</a>
+            <a href="https://twitter.com/kowainik" target=_blank>@kowainik</a>
+            <a href="https://twitter.com/vrom911" target=_blank>@vrom911</a>
+            <a href="https://twitter.com/chshersh" target=_blank>@chshersh</a>
+        </p>
+
+        <p> Or by writing an email to <i>xrom.xkov@gmail.com</i></p>
+
+        <p>
+            If you see any issues, please report them on <a href="https://github.com/AdventOfHaskell/AdventOfHaskell.github.io/issues" target="_blank">GitHub</a>
+
+        </p>
+        <p> We want to hear from you!</p>
+      </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-6 col-sm-12 mt-5">
+      <div class="col-12 mt-5 pt-4">
+        <ul class="list-unstyled contact-us__social-list text-center">
+          <li class="list-inline-item"><a href="https://twitter.com/AdventOfHaskell"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="https://github.com/AdventOfHaskell"><i class="fab fa-github"></i></a></li>
+          <li class="list-inline-item"><a href="https://ko-fi.com/kowainik"><i class="fa fa-coffee"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12 mx-auto text-center">
+          <p>Copyright &copy; <a href="https://kowainik.github.io">Kowainik</a> 2020</p>
+          <p class="beautiful-font">Created with <i class="fas fa-heart"> </i> by <a href="https://kowainik.github.io">Kowainik</a></p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<div class="control-points-section">
+ <ul class="list-unstyled">
+   <li><a href="#home" data-toggle="elementscroll"><span>Home</span></a></li>
+   <li><a href="#about" data-toggle="elementscroll"><span>About</span></a></li>
+   <li><a href="#rules" data-toggle="elementscroll"><span>Rules</span></a></li>
+   <li><a href="#motivation" data-toggle="elementscroll"><span>Motivation</span></a></li>
+   <li><a href="#calendar" data-toggle="elementscroll"><span>Calendar</span></a></li>
+   <li><a href="#contact-us-section" data-toggle="elementscroll"><span>Contact Us</span></a></li>
+ </ul>
+</div>
+
 </body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"> </script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/custom.particlesJS.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+  $(window).scroll(function() {
+   var x = $(this).scrollTop();
+   $('#home').css('background-position', '0% ' + parseInt(-x / 1) + 'px');
+   $('#calendar,#motivation,#rules,#about').css('background-position', '0% ' + parseInt(-x / 1) + 'px');
+   $('.tree-banner').css('background-position', + parseInt(-x / 1) + 'px', '0% ' );
+ });
+</script>
 </html>
