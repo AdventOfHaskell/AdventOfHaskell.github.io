@@ -110,15 +110,15 @@ a:focus {text-decoration: none;}
   margin: 0;
 }
 .top-banner h1 {
-  font-size: 200px;
+  font-size: 7rem;
   font-weight: bold;
-  line-height: 200px;
+  line-height: 2em;
   margin: 0;
 }
 .top-banner p {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
-  line-height: 66px;
+  line-height: 1.2em;
   font-weight: 500;
 }
 .top-banner #particles-js {
